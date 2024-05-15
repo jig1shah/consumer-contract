@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "clean": "rimraf pacts",
-    "test": "npm run clean && npm run test:consumer && npm run test:mobile && npm run test:publish && npm run test:provider",
-    "test:consumer": "jest --testTimeout 30000 --testMatch \"**/consumer.spec.js\"",
+    "test": "npm run clean && npm run test:consumer && npm run test:mobile && npm run test:publish",
+    "test:articleConsumer": "jest --testTimeout 30000 --testMatch \"**/articleConsumer.spec.js\"",
+    "test:secondArticleConsumer": "jest --testTimeout 30000 --testMatch \"**/secondArticleConsumer.spec.js\"",
     "test:mobile": "jest --testTimeout 30000 --testMatch \"**/mobile-consumer.spec.js\"",
     "test:publish": "pact-broker publish ./pacts --consumer-app-version=\"1.0.0\" --auto-detect-version-properties --broker-base-url=https://al20jazeera.pactflow.io --broker-token pqUDksFukt0CRI9gGoYUUQ"
   },
@@ -19,5 +20,8 @@
     "@pact-foundation/pact": "12.1.0",
     "jest": "29.7.0",
     "rimraf": "5.0.5"
+  },
+  "devDependencies": {
+    "jest-html-reporter": "^3.10.2"
   }
 }

@@ -14,10 +14,10 @@ const provider = new PactV3({
 });
 
 describe("API Pact test", () => {
-    test("Verify Article Contract", async () => {
+    test("Second File Verify Article Contract", async () => {
       await provider.addInteraction({
-        states: [{ description: "Verify Article" }],
-        uponReceiving: "Get Article",
+        states: [{ description: "Second File Verify Article" }],
+        uponReceiving: "Second File Get Article",
         withRequest: {
           method: "GET",
           path: "/graphql",
