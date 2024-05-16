@@ -31,3 +31,5 @@ jobs:
     - run: yarn global add jest
     - run: jest
     - run: yarn test:publish
+    - run: yarn pact-broker publish ./pacts --consumer-app-version=\"1.0.0\" --auto-detect-version-properties --broker-base-url=https://al20jazeera.pactflow.io --broker-token pqUDksFukt0CRI9gGoYUUQ
+    
